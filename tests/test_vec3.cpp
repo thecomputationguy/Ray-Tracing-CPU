@@ -28,11 +28,11 @@ void test_vec3() {
     assert(v6.x() == 2.0 && v6.y() == 4.0 && v6.z() == 6.0);
 
     // Test dot product
-    double dot_product = v2.dot(vec3(2.0, 0.0, 0.0));
+    double dot_product = dot(vec3(2.0, 0.0, 0.0), v2);
     assert(dot_product == 2.0);
 
     // Test cross product
-    vec3 v7 = vec3(1, 0, 0).cross(vec3(0, 1, 0));
+    vec3 v7 = cross(vec3(1, 0, 0), vec3(0, 1, 0));
     assert(v7.x() == 0 && v7.y() == 0 && v7.z() == 1);
 
     // Test length
